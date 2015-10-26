@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HLTHIR403C_CHCCS411C_AS3.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .auto-style1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .auto-style2 {
+            text-align: center;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="header">
+            <h1 class="auto-style1">
+
+
+                
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/tech support logo_sml.png" />
+                
+            </h1>
+        </div>
+
+
+        <div class="navigation">
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            <asp:Panel ID="menuPanel" runat="server">
+                <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticDisplayLevels="2" CssClass="menu">
+                </asp:Menu>
+            </asp:Panel>
+            <asp:Panel ID="Panel1" runat="server">
+            </asp:Panel>
+            <br />
+        </div>
+
+        <div align="right" style="text-align: right; font-size: 18px">
+            <asp:LoginView ID="LoginView1" runat="server">
+                <AnonymousTemplate>
+                    &nbsp;
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                    Welcome
+                    <asp:LoginName ID="LoginName2" runat="server" />
+                </LoggedInTemplate>
+            </asp:LoginView>
+
+            </br>
+            </br>
+            <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="" LogoutAction="RedirectToLoginPage" LogoutPageUrl="~/default.aspx" />
+            </br>
+        </div>
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+        <div class="auto-style2">
+                    <span class="auto-style2">&copy; 2015 TechSupport PTY LTD </span> 
+        </div>
+
+    </form>
+</body>
+</html>
