@@ -80,6 +80,7 @@
     <Content Include="SupportOfficer\addIncident.aspx" />
     <Content Include="SupportOfficer\newIncident.aspx" />
     <Content Include="SupportOfficer\SupportOfficerHomePage.aspx" />
+    <Content Include="Technician\searchCustomer.aspx" />
     <Content Include="Technician\technician.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -175,6 +176,13 @@
     </Compile>
     <Compile Include="SupportOfficer\SupportOfficerHomePage.aspx.designer.cs">
       <DependentUpon>SupportOfficerHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Technician\searchCustomer.aspx.cs">
+      <DependentUpon>searchCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Technician\searchCustomer.aspx.designer.cs">
+      <DependentUpon>searchCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Technician\technician.aspx.cs">
       <DependentUpon>technician.aspx</DependentUpon>
