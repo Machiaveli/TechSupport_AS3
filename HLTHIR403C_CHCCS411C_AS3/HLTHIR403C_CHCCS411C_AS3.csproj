@@ -77,6 +77,7 @@
     <Content Include="Admin\registration.aspx" />
     <Content Include="Styles\Style.css" />
     <Content Include="SupportOfficer\newIncident.aspx" />
+    <Content Include="SupportOfficer\SupportOfficerHomePage.aspx" />
     <Content Include="Technician\technician.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -151,6 +152,13 @@
     </Compile>
     <Compile Include="SupportOfficer\newIncident.aspx.designer.cs">
       <DependentUpon>newIncident.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportOfficer\SupportOfficerHomePage.aspx.cs">
+      <DependentUpon>SupportOfficerHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportOfficer\SupportOfficerHomePage.aspx.designer.cs">
+      <DependentUpon>SupportOfficerHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Technician\technician.aspx.cs">
       <DependentUpon>technician.aspx</DependentUpon>
