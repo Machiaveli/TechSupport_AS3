@@ -16,9 +16,9 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,8 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\addCustomer.aspx" />
+    <Content Include="Admin\customers.aspx" />
     <Content Include="Admin\insertCustomer.aspx" />
-    <Content Include="Admin\newCustomer.aspx" />
     <Content Include="App_Data\ASPNETDB.MDF" />
     <Content Include="App_Data\aspnetdb_log.ldf">
       <DependentUpon>ASPNETDB.MDF</DependentUpon>
@@ -76,6 +77,7 @@
     <Content Include="login.aspx" />
     <Content Include="Admin\registration.aspx" />
     <Content Include="Styles\Style.css" />
+    <Content Include="SupportOfficer\addIncident.aspx" />
     <Content Include="SupportOfficer\newIncident.aspx" />
     <Content Include="SupportOfficer\SupportOfficerHomePage.aspx" />
     <Content Include="Technician\technician.aspx" />
@@ -84,19 +86,26 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\addCustomer.aspx.cs">
+      <DependentUpon>addCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\addCustomer.aspx.designer.cs">
+      <DependentUpon>addCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\customers.aspx.cs">
+      <DependentUpon>customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\customers.aspx.designer.cs">
+      <DependentUpon>customers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\insertCustomer.aspx.cs">
       <DependentUpon>insertCustomer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\insertCustomer.aspx.designer.cs">
       <DependentUpon>insertCustomer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\newCustomer.aspx.cs">
-      <DependentUpon>newCustomer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\newCustomer.aspx.designer.cs">
-      <DependentUpon>newCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -145,6 +154,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SupportOfficer\addIncident.aspx.cs">
+      <DependentUpon>addIncident.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportOfficer\addIncident.aspx.designer.cs">
+      <DependentUpon>addIncident.aspx</DependentUpon>
     </Compile>
     <Compile Include="SupportOfficer\newIncident.aspx.cs">
       <DependentUpon>newIncident.aspx</DependentUpon>
