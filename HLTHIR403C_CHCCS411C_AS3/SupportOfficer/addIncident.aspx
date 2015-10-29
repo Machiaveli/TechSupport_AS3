@@ -35,7 +35,7 @@ private void AddIncident(object source, EventArgs e) {
             <td>
                 <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="CustomerID" DataValueField="CustomerID" AutoPostBack="True">
                 </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [CustomerID], [ProductCode] FROM [Registrations] ORDER BY [CustomerID]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Customers.CustomerID FROM Customers INNER JOIN Registrations ON Customers.CustomerID = Registrations.CustomerID ORDER BY Customers.CustomerID" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
             </td>
         </tr>
         <tr>
